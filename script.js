@@ -1,5 +1,5 @@
 const leagueAverage = {
-    R: 39,
+    R: 390,
     RBI: 34,
     AB: 157,
     H: 39,
