@@ -1,102 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Fantasy Baseball Value Tester</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
+    <head>
+        <title>Fantasy Baseball Value Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-        table {
-            border-collapse: collapse;
-            width: 800px;
-        }
+    <body>
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-        }
+    <h2>Fantasy Baseball Value Calculator</h2>
 
-        th {
-            background-color: #f2f2f2;
-        }
+    <button onclick="calculateValues()">Calculate Values</button>
 
-        input {
-            width: 60px;
-            text-align: center;
-        }
+        <table id="playerTable">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>R</th>
+                    <th>RBI</th>
+                    <th>AB</th>
+                    <th>H</th>
+                    <th>TB</th>
+                    <th>SB</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
 
-        .name {
-            width: 180px;
-        }
-    </style>
-</head>
-<body>
+            <tbody>
 
-<h2>Fantasy Baseball Value Calculator</h2>
+                <tr id="avgRow">
+                    <td><input class="name" value="Average"></td>
+                    <td><input id="avg_R"></td>
+                    <td><input id="avg_RBI"></td>
+                    <td><input id="avg_AB"></td>
+                    <td><input id="avg_H"></td>
+                    <td><input id="avg_TB"></td>
+                    <td><input id="avg_SB"></td>
+                    <td>-</td>
+                </tr>
 
-<table id="playerTable">
-    <thead>
-        <tr>
-            <th>Player</th>
-            <th>R</th>
-            <th>RBI</th>
-            <th>AB</th>
-            <th>H</th>
-            <th>TB</th>
-            <th>SB</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><input class="name" value="Julio Rodriguez"></td>
-            <td><input value="39"></td>
-            <td><input value="34"></td>
-            <td><input value="157"></td>
-            <td><input value="39"></td>
-            <td><input value="153"></td>
-            <td><input value="9"></td>
-        </tr>
-        <tr>
-            <td><input class="name" value="Yandy Diaz"></td>
-            <td><input value="34"></td>
-            <td><input value="46"></td>
-            <td><input value="156"></td>
-            <td><input value="49"></td>
-            <td><input value="163"></td>
-            <td><input value="1"></td>
-        </tr>
-        <tr>
-            <td><input class="name" value="Angel Martinez"></td>
-            <td><input value="28"></td>
-            <td><input value="33"></td>
-            <td><input value="117"></td>
-            <td><input value="28"></td>
-            <td><input value="112"></td>
-            <td><input value="9"></td>
-        </tr>
-        <tr>
-            <td><input class="name" value="Zack Gelof"></td>
-            <td><input value="32"></td>
-            <td><input value="26"></td>
-            <td><input value="120"></td>
-            <td><input value="33"></td>
-            <td><input value="103"></td>
-            <td><input value="7"></td>
-        </tr>
-        <tr>
-            <td><input class="name" value="Paul Goldschmidt"></td>
-            <td><input value="24"></td>
-            <td><input value="31"></td>
-            <td><input value="132"></td>
-            <td><input value="39"></td>
-            <td><input value="101"></td>
-            <td><input value="1"></td>
-        </tr>
-    </tbody>
-</table>
+                <tr>
+                    <td><input class="name" value="Julio Rodriguez"></td>
+                    <td><input value="39"></td>
+                    <td><input value="34"></td>
+                    <td><input value="157"></td>
+                    <td><input value="39"></td>
+                    <td><input value="153"></td>
+                    <td><input value="9"></td>
+                    <td class="total"></td>
+                </tr>
 
-</body>
+            </tbody>
+        </table>
+
+        <script src="script.js"></script>
+
+    </body>
 </html>
